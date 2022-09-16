@@ -3,6 +3,7 @@
     <div id="error_explanation">
       <h2><%= pluralize(book.errors.count, "error") %> prohibited this book from being saved:</h2>
 
+
       <ul>
         <% book.errors.each do |error| %>
           <li><%= error.full_message %></li>
@@ -15,6 +16,19 @@
     <%= form.label :title %>
     <%= form.text_field :title %>
   </div>
+    <div class="field">
+    <%= form.label :author %>
+    <%= form.text_field :author %>
+  </div>
+    <div class="field">
+    <%= form.label :price %>
+    <%= form.text_field :price %>
+  </div>
+  <div class="field">
+    <%= form.label :publish_date %>
+    <%= form.date_select :publish_date %>
+  </div>
+
 
   <div class="actions">
     <%= form.submit %>
